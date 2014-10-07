@@ -1,22 +1,62 @@
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+       <ul class="button-group">
 
-<h1> Welcome to my SUPERRR BLOGGGGGG</h1>
-<table>
-  <thead>
-    <tr>
-      <th width="200">All Blogs</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <% (@blogs).each do |blog| %>
-      <td><%= link_to blog.title, blog %></td>
-      <% end %>
-    </tr>
-  </tbody>
-  <%= link_to "New Blog", new_blog_path, class:"button [secondary success alert]" %>
-</table>
+        <% (@blogs).each do |blog| %>
+         <li><%= link_to blog.title%></li>
+        
+         <% end %>
 
+        </ul>
+      </div>
+      <h1>Superrr Blog <small>by Doug Walter</small></h1>
+      <hr/>
+    </div>
+  </div>
+ 
+   <%= link_to "New Blog", new_blog_path, class:"button [secondary success alert]" %>
+ 
+ 
+   
+ 
+  <div class="row">
+ 
+     
+    <div class="large-9 medium-8 columns" role="content">
+ 
+      <article>
+        <% (@blogs).each do |blog| %>
+        <h3><%= link_to blog.title %></h3>
+        <h6>Written by <a href="#">Douglas Walter</a> <%= blog.created_at %> </h6>
+ 
+        <div class="row">
+          <div class="large-6 columns">
+            <p>blog.body</p>
+            <% end %>
+          </div>
+          <div class="large-6 columns">
+            <img src="http://placehold.it/400x240&text=[img]"/>
+          </div>
+        </div>
+ 
+      </article>
+ 
+      <hr/>
+ 
+ 
+    </div>
+  </div>
+ 
 
-
-
-<!-- <td><a href="#" class="button [secondary success alert]">Color Button</a></td> -->
+ 
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>Built with Rails 4 by Douglas Walter</p>
+        </div>
+      </div>
+    </div>
+  </footer>
