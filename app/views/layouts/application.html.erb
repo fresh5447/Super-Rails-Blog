@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SuperBlog</title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <%= render partial: 'partials/nav' %>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

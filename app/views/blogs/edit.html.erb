@@ -1,0 +1,10 @@
+<h1> Edit This Blog</h1>
+
+<%= form_for @blog do |f| %>
+    <pre>
+    Subject: <%= f.text_field :title %>
+    Body: <%= f.text_area :body %>
+
+    <%= f.submit %>
+    </pre>  
+  <% end %>

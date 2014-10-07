@@ -1,0 +1,22 @@
+
+<h1> Welcome to my SUPERRR BLOGGGGGG</h1>
+<table>
+  <thead>
+    <tr>
+      <th width="200">All Blogs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% (@blogs).each do |blog| %>
+      <td><%= link_to blog.title, blog %></td>
+      <% end %>
+    </tr>
+  </tbody>
+  <%= link_to "New Blog", new_blog_path, class:"button [secondary success alert]" %>
+</table>
+
+
+
+
+<!-- <td><a href="#" class="button [secondary success alert]">Color Button</a></td> -->
